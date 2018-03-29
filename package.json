@@ -1,0 +1,28 @@
+{
+  "name": "talks_board",
+  "version": "0.0.1",
+  "description": "A simple board where talks can be proposed.",
+  "main": "talks_board_server.js",
+  "dependencies": {
+    "ecstatic": "^3.2.0",
+    "mz": "^2.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/latsic/talks_board.git"
+  },
+  "keywords": [
+    "long",
+    "polling"
+  ],
+  "author": "latsic / eloquent javascript book",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/latsic/talks_board/issues"
+  },
+  "homepage": "https://github.com/latsic/talks_board#readme"
+}
