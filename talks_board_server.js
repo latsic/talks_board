@@ -12,15 +12,15 @@ const defaultHeaders = {"Content-Type": "text/plain"};
 
 // A regex which handles the 'talks' route with a title.
 // This can be used to add, delete or retrieve a talk.
- const talkPath = /^\/talks\/([^\/]+)$/;
+ const talkPath = /^\/+talks\/([^\/]+)$/;
 
 // A regex which handles the 'talks' route with a comment.
 // This can be used to add comments.
- const talkPathAddComment = /^\/talks\/([^\/]+)\/comments$/;
+ const talkPathAddComment = /^\/+talks\/([^\/]+)\/comments$/;
 
 // A regex which handles the talks route without any
 // further path elements.
-const talksPath = /^\/talks$/;
+const talksPath = /^\/+talks$/;
 
 function getDomainPath()
 {
