@@ -5,11 +5,11 @@ function fetchOk(url, options) {
 
     let match = /^\/(.+)\/[^\/]+$/.exec(window.location.pathname);
     console.log("url before: ", url)
-    if(match){
-        console.log("match: ", match[1]);
-        url = "/" + match[1] + url;
+    // if(match){
+    //     console.log("match: ", match[1]);
+    //     url = "/" + match[1] + url;
 
-    }
+    // }
     console.log("url after: ", url);
 
     //console.log("window.location: ", window.location);
@@ -315,7 +315,7 @@ async function pollTalks(update) {
         let response;
         try {
             response = await fetchOk(
-                "/talks", 
+                "talks", 
                 {
                     headers: tag && {
                                 "If-None-Match": tag,
