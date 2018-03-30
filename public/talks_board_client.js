@@ -7,7 +7,7 @@ function fetchOk(url, options) {
     console.log("url before: ", url)
     if(match){
         console.log("match: ", match[1]);
-        url = match[1] + "/" + url;
+        url = + "/" + match[1] + url;
 
     }
     console.log("url after: ", url);
