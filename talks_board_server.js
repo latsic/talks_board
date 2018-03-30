@@ -22,6 +22,17 @@ const defaultHeaders = {"Content-Type": "text/plain"};
 // further path elements.
 const talksPath = /^\/talks$/;
 
+function getDomainPath()
+{
+    if(process.argv.length > 2)
+    {
+        return process.argv[2];
+    }
+    return "";
+}
+
+const domainPath = getDomainPath;
+
 /**
  * A server which routes all 'unknown' routes
  * to a static fileserver ('ecstatic') but has the
