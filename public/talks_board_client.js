@@ -1,21 +1,7 @@
-
   
 function fetchOk(url, options) {
 
-
-    let match = /^\/(.+)\/[^\/]+$/.exec(window.location.pathname);
-    console.log("url before: ", url)
-    // if(match){
-    //     console.log("match: ", match[1]);
-    //     url = "/" + match[1] + url;
-
-    // }
-    console.log("url after: ", url);
-
-    //console.log("window.location: ", window.location);
-    console.log("window.location.pathname: ", window.location.pathname);
-    //console.log("window.location.host: ", window.location.host);
-    //console.log("window.location.hostname: ", window.location.hostname);
+    console.log("fetch url: ", url);
 
     return fetch(url, options).then(response => {
 
@@ -25,8 +11,6 @@ function fetchOk(url, options) {
 }
 
 function talkUrl(title) {
-    //console.log("window.location: ", window.location);
-    //console.log("window.location.pathname: ", window.location.pathname);
     return "talks/" + encodeURIComponent(title);
 }
 
@@ -297,7 +281,7 @@ function renderTalkForm(dispatch) {
                     summary: summary.value});
           event.target.reset();
         }
-      }, elt("h3", null, "Submit a Talk"),
+      }, elt("h3", null, "Create a Talk"),
          elt("label", null, "Title: ", title),
          elt("label", null, "Summary: ", summary),
          elt("button", {type: "submit"}, "Submit"));

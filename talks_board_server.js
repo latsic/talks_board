@@ -1,6 +1,5 @@
 
 
-
 const {createServer} = require("http");
 const Router = require("./router");
 const ecstatic = require("ecstatic");
@@ -12,26 +11,15 @@ const defaultHeaders = {"Content-Type": "text/plain"};
 
 // A regex which handles the 'talks' route with a title.
 // This can be used to add, delete or retrieve a talk.
- const talkPath = /^\/+talks\/([^\/]+)$/;
+ const talkPath = /^\/talks\/([^\/]+)$/;
 
 // A regex which handles the 'talks' route with a comment.
 // This can be used to add comments.
- const talkPathAddComment = /^\/+talks\/([^\/]+)\/comments$/;
+ const talkPathAddComment = /^\/talks\/([^\/]+)\/comments$/;
 
 // A regex which handles the talks route without any
 // further path elements.
-const talksPath = /^\/+talks$/;
-
-function getDomainPath()
-{
-    if(process.argv.length > 2)
-    {
-        return process.argv[2];
-    }
-    return "";
-}
-
-const domainPath = getDomainPath;
+const talksPath = /^\/talks$/;
 
 /**
  * A server which routes all 'unknown' routes
