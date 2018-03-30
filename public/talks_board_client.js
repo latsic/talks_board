@@ -2,10 +2,20 @@
   
 function fetchOk(url, options) {
 
-    console.log("window.location: ", window.location);
+
+    let match = /^\/(.+)\/[^\/]+$/.exec(window.location.pathname);
+    console.log("url before: ", url)
+    if(match){
+        
+        url = match[1] + "/" + url;
+
+    }
+    console.log("url after: ", url);
+
+    //console.log("window.location: ", window.location);
     console.log("window.location.pathname: ", window.location.pathname);
-    console.log("window.location.host: ", window.location.host);
-    console.log("window.location.hostname: ", window.location.hostname);
+    //console.log("window.location.host: ", window.location.host);
+    //console.log("window.location.hostname: ", window.location.hostname);
 
     return fetch(url, options).then(response => {
 
@@ -15,8 +25,8 @@ function fetchOk(url, options) {
 }
 
 function talkUrl(title) {
-    console.log("window.location: ", window.location);
-    console.log("window.location.pathname: ", window.location.pathname);
+    //console.log("window.location: ", window.location);
+    //console.log("window.location.pathname: ", window.location.pathname);
     return "talks/" + encodeURIComponent(title);
 }
 
