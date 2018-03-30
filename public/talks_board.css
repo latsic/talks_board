@@ -41,6 +41,7 @@ h1, h3 {
 }
 
 label input {
-    display: block; width: 30em;
+    display: block;
+    width: 100%;
 }
 
