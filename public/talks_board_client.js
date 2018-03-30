@@ -3,14 +3,14 @@
 function fetchOk(url, options) {
 
 
-    let match = /^\/(.+)\/[^\/]+$/.exec(window.location.pathname);
-    console.log("url before: ", url)
-    if(match){
-        
-        url = match[1] + "/" + url;
+    //let match = /^\/(.+)\/[^\/]+$/.exec(window.location.pathname);
+    //console.log("url before: ", url)
+    //if(match){
+    //    
+    //    url = match[1] + "/" + url;
 
-    }
-    console.log("url after: ", url);
+    //}
+    //console.log("url after: ", url);
 
     //console.log("window.location: ", window.location);
     console.log("window.location.pathname: ", window.location.pathname);
